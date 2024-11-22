@@ -36,6 +36,13 @@
   content: none !important;
 
 }
+.black {
+
+  font-size: 25px !important;
+  background-color: rgba(0, 0, 0, 0.6) !important;
+
+  transform: translateY(-50%);
+}
 .mySwiperLeft {
 
 
@@ -49,13 +56,13 @@
 
 }
 .swiper-button-prev,
-.swiper-button-next {
+.swiper-button-next  {
   font-size: 16px !important;
 
   color: white !important;
   width: 35px !important;
   height: 35px !important;
   background-color: rgba(0, 0, 0, 0.6) !important;
-  transform: translateY(50%);
+ 
 
 }
