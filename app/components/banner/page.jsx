@@ -57,7 +57,7 @@ export default function Page() {
   };
 
   return (
-    <div className="banner h-[72vh] flex flex-col gap-5 justify-center px-12  lg:px-24 ">
+    <div className="banner m-h-[72vh] flex flex-col gap-5 justify-center px-12  py-10 lg:px-24 ">
       <h1 className="text-3xl lg:text-5xl text-white font-bold">
         Find Your New Home
       </h1>

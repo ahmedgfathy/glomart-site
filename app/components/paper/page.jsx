@@ -1,17 +1,18 @@
 "use client";
 import { Grid } from "@mui/material";
 import { useRouter } from "next/navigation";
-import React from "react";
+import React , {useState} from "react";
 
 export default function Page({ h1, data, results }) {
   let router = useRouter();
 
+  const [hoveredImage, setHoveredImage] = useState(null);
   return (
     <div>
-      <Grid container className="flex gap-10 justify-center">
-        <Grid item xs={12} lg={10.8}>
+      <Grid container className="flex gap-10 md:justify-between lg:justify-center">
+        <Grid item xs={12} lg={10.8} >
           <h1
-            className="font-bold text-2xl my-4"
+            className="font-bold text-2xl my-4 "
             style={{ color: "rgb(30, 65, 100)" }}
           >
             {h1}
@@ -21,17 +22,18 @@ export default function Page({ h1, data, results }) {
           </p>
         </Grid>
       </Grid>
-      <Grid container className="flex gap-10 justify-center">
+      <Grid container className="flex gap-10 md:justify-between lg:justify-center">
         {data &&
           data?.map((item, index) => {
             return (
               <Grid
                 item
                 xs={12}
-                md={2.5}
+                sm={5.5}
+                md={3}
                 lg={item.round === "full" ? 2.4 : 1.5}
                 key={index}
-                className="border cursor-pointer flex gap-3 p-4 flex-col rounded-lg justify-center items-center"
+                className="border cursor-pointer flex gap-2 p-4 flex-col rounded-lg justify-center items-center"
                 style={{ borderColor: "#ccc" }}
                 onClick={() => {
                   item.link ? router.push(item.link) : undefined;
@@ -42,15 +44,14 @@ export default function Page({ h1, data, results }) {
                   alt="..."
                   style={{
                     borderWidth: item.round === "full" ? "10px" : undefined,
-                    borderColor: "#f2f2f2",
+                    borderColor: hoveredImage === index ? "#ccc" : "#f2f2f2",
                     width: `${item.width}px`,
                     height: `${item.width}px`,
-                    borderRadius:
-                      item.round === "full" ? "50%" : `${item.round}px`,
+                    borderRadius: item.round === "full" ? "50%" : `${item.round}px`,
                   }}
-                  className={`m-auto ${
-                    item.round === "full" ? "border" : undefined
-                  }`}
+                  onMouseOver={() => setHoveredImage(index)} 
+                  onMouseOut={() => setHoveredImage(null)} 
+                  className={`m-auto ${item.round === "full" ? "border" : ""} transition duration-400`}
                 />
                 <p className="text-center font-bold">{item.title}</p>
                 {item.number && (
