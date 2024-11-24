@@ -33,12 +33,16 @@ export default function contact({ unit }) {
         <p className="text-sm mt-3">Price</p>
         <div className="flex items-center  flex-wrap">
           <p className="flex-1 font-bold text-2xl ">
+<<<<<<< HEAD
             {unit.totalPrice?.toLocaleString()} {unit.currency}
+=======
+            {unit?.totalPrice?.toLocaleString()} {unit?.currency}
+>>>>>>> 8343210b8889951926166ad0c99199e97fb416b8
           </p>
 
           <div className="flex items-center gap-5">
             <a
-              href={`tel:${unit.tel}`}
+              href={`tel:${unit?.tel}`}
               className="flex items-center  gap-2 justify-center px-4 py-2 text-white bg-blue-600 hover:bg-blue-700 rounded-md shadow-md transition duration-200"
             >
               <MdCall className="text-xl" /> <span>Call US</span>

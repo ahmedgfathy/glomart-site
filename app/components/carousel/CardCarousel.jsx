@@ -1,6 +1,6 @@
 "use client";
 // components/Carousel.js
-import React from "react";
+import React, { useState, useEffect } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -19,13 +19,20 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 import { FreeMode, Pagination, Navigation } from "swiper/modules";
 import { Grid } from "@mui/material";
 import Card from "../card/Cards";
-import { useRouter } from "next/navigation";
+import { getAllProperties } from "@/actions/propertiesAction";
+import CardProperty from "../CardProperty";
 
-
-
-export default function App({ data, h1 }) {
-  let router = useRouter()
-
+export default function App({ data }) {
+  const [units, setUnits] = useState([]);
+  const fetchData = async () => {
+    const { properties, totalProperties } = await getAllProperties();
+    const likeProperties = properties.filter((property) => property.liked);
+    setUnits(likeProperties);
+    console.log(likeProperties);
+  };
+  useEffect(() => {
+    fetchData();
+  }, []);
   return (
     <div>
       <Grid container className="flex justify-center">
@@ -34,7 +41,7 @@ export default function App({ data, h1 }) {
             className="font-bold text-2xl my-4"
             style={{ color: "rgb(30, 65, 100)" }}
           >
-            {h1}
+            Recommended{" "}
           </h1>
 
           <div className="relative">
@@ -64,12 +71,12 @@ export default function App({ data, h1 }) {
               }}
             >
               {data.map((ele, index) => (
-                <SwiperSlide key={index} onClick={()=>{
-
-                  router.push(`/home/area/${ele.id}`)
-                }}>
-
-                  <Card property={ele}  />
+                <SwiperSlide key={index}>
+                  {units.length > 0 ? (
+                    <CardProperty property={units[index]} />
+                  ) : (
+                    <Card property={ele} />
+                  )}
                 </SwiperSlide>
               ))}
             </Swiper>
