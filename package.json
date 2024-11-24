@@ -30,7 +30,7 @@
     "react-phone-input-2": "^2.15.1",
     "react-phone-number-input": "^3.4.9",
     "react-slideshow-image": "^4.3.2",
-    "swiper": "^11.1.14",
+    "swiper": "^11.1.15",
     "tailwind-merge": "^2.5.4",
     "tailwindcss-animate": "^1.0.7"
   },
