@@ -32,7 +32,7 @@ const Banner = () => {
   return (
     <div className="banner sm:h-auto md:h-[90vh] flex flex-col gap-5 justify-center items-center w-full  relative">
       <Swiper />
-      <div className="w-full absolute sm:px-20 lg:px-50 z-20 flex flex-col gap-5">
+      <div className="w-full absolute px-10 lg:px-20 z-20 flex flex-col gap-5">
         <h1 className="text-3xl lg:text-5xl text-white font-bold">
           Find Your New Home
         </h1>
@@ -40,7 +40,7 @@ const Banner = () => {
           Search & compare among 5000+ properties and 500+ compounds or list your property for sale
         </p>
 
-        <Grid container className="flex justify-center gap-5 p-4" style={{ backgroundColor: "rgb(255 255 255 / 90%)" }}>
+        <Grid container className="hidden lg:flex justify-center gap-5 p-4" style={{ backgroundColor: "rgb(255 255 255 / 90%)" }}>
           <Grid item className="flex-1">
             <div className="relative w-full">
               <input
@@ -53,7 +53,8 @@ const Banner = () => {
               />
 
               {isDropdownVisible && (
-                <ul className="p-3 absolute w-full mt-2 bg-white border border-gray-200 rounded-lg shadow-lg max-h-60 overflow-y-auto">
+                <ul className="p-3 
+ absolute w-full mt-2 bg-white border border-gray-200 rounded-lg shadow-lg max-h-60 overflow-y-auto">
                   <h1 className="font-bold text-gray-600 mb-3">Search Results</h1>
                   {filteredResults.length > 0 ? (
                     filteredResults.map((item, index) => (
