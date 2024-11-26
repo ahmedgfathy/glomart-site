@@ -20,7 +20,6 @@ export default function Component() {
     const { properties, totalProperties } = await getAllProperties();
     const data = properties.filter((unit)=> unit.liked )
     setUnits(data)
-    console.log(data)
   }
   useEffect(() => {
     fetchData();
