@@ -76,9 +76,9 @@ export default function Page() {
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             <p className="flex items-center gap-5">
-              <span className="text-xl text-dark dark:text-white">
+              {/* <span className="text-xl text-dark dark:text-white">
                 <FiHeart />
-              </span>{" "}
+              </span>{" "} */}
               <span className="text-xl text-dark dark:text-white">العربية</span>
             </p>
             <Menu as="div" className="relative ml-3">

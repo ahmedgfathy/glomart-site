@@ -33,7 +33,7 @@ export default function contact({ unit }) {
         <p className="text-sm mt-3">Price</p>
         <div className="flex items-center  flex-wrap">
           <p className="flex-1 font-bold text-2xl ">
-            {unit?.totalPrice?.toLocaleString()} {unit?.currency}
+            {unit.totalPrice?.toLocaleString()} {unit.currency}
           </p>
 
           <div className="flex items-center gap-5">
