@@ -21,6 +21,8 @@ import { Grid } from "@mui/material";
 import Card from "../card/Cards";
 import { getAllProperties } from "@/actions/propertiesAction";
 import CardProperty from "../CardProperty";
+import RentAndSellCard from "../rent-and-sell-card/RentAndSellCard";
+import { properties } from "@/app/(pages)/home/data";
 
 export default function App({ data }) {
   const [units, setUnits] = useState([]);
@@ -63,20 +65,20 @@ export default function App({ data }) {
                   slidesPerView: 2, // Tablet screens
                 },
                 768: {
-                  slidesPerView: 3, // Medium screens
+                  slidesPerView:2, // Medium screens
                 },
-                1024: {
+                1200: {
                   slidesPerView: 3, // Large screens
                 },
               }}
             >
-              {data.map((ele, index) => (
+
+
+              {units.map((property, index) => (
                 <SwiperSlide key={index}>
-                  {units.length > 0 ? (
-                    <CardProperty property={units[index]} />
-                  ) : (
-                    <Card property={ele} />
-                  )}
+
+                  <RentAndSellCard property={property} key={index} h1="Recommended" />
+
                 </SwiperSlide>
               ))}
             </Swiper>

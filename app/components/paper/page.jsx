@@ -1,7 +1,7 @@
 "use client";
 import { Grid } from "@mui/material";
 import { useRouter } from "next/navigation";
-import React , {useState} from "react";
+import React, { useState } from "react";
 
 export default function Page({ h1, data, results }) {
   let router = useRouter();
@@ -12,7 +12,7 @@ export default function Page({ h1, data, results }) {
       <Grid container className="flex gap-10 md:justify-between lg:justify-center">
         <Grid item xs={12} lg={10.8} >
           <h1
-            className="font-bold text-2xl my-4 "
+            className="font-bold lg:text-2xl my-4 "
             style={{ color: "rgb(30, 65, 100)" }}
           >
             {h1}
@@ -49,8 +49,8 @@ export default function Page({ h1, data, results }) {
                     height: `${item.width}px`,
                     borderRadius: item.round === "full" ? "50%" : `${item.round}px`,
                   }}
-                  onMouseOver={() => setHoveredImage(index)} 
-                  onMouseOut={() => setHoveredImage(null)} 
+                  onMouseOver={() => setHoveredImage(index)}
+                  onMouseOut={() => setHoveredImage(null)}
                   className={`m-auto ${item.round === "full" ? "border" : ""} transition duration-400`}
                 />
                 <p className="text-center font-bold">{item.title}</p>

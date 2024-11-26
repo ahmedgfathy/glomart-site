@@ -24,7 +24,7 @@ export default function App() {
   };
 
   return (
-    <div className='relative'>
+    <div className='relative '>
       <Swiper
         slidesPerView={1}
         spaceBetween={30}
@@ -39,7 +39,7 @@ export default function App() {
         onSlideChange={handleSlideChange}  
       >
         <div>
-          <p className='absolute left-5 top-5 text-xl cursor-pointer z-10'>
+          <p className='absolute left-5 top-5 text-md cursor-pointer z-10'>
             <span>{index}</span> / <span>{data.length}</span>
           </p>
           <IoClose

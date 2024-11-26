@@ -8,22 +8,24 @@ import { CiLocationOn } from "react-icons/ci";
 import { HiMiniCurrencyDollar } from "react-icons/hi2";
 import { BsWhatsapp } from 'react-icons/bs'
 import { FiPhone } from 'react-icons/fi'
+import { useRouter } from 'next/navigation'
 
-export default function RentAndSellCard({ property , h1 }) {
+export default function RentAndSellCard({ property, h1 }) {
+    let router = useRouter()
     return (
 
         <div key={property.$id} onClick={() => {
 
             router.push(`/home/area/${property.$id}`)
-        }} className="bg-white rounded-lg shadow hover:shadow-md overflow-hidden">
+        }} className="bg-white rounded-lg shadow hover:shadow-md overflow-hidden cursor-pointer">
             <div className="relative">
-                <img src={property.image || "/images/contact-background.webp"} alt={property.name} className="w-full h-48 object-cover" />
-                <p
-                    className="absolute top-2 left-2 bg-red-500 text-white px-4 py-1 text-center rounded-md font-bold"
-                    style={{ transform: "rotate(-10deg)" }}
+                <img src={property.href || "/images/contact-background.webp"} alt={property.name} className="w-full h-48 object-cover" />
+               { h1 === "Recommended" && <p
+                    className="absolute top-0 text-sm bg-red-500 text-white px-2  py-1 text-center rounded-md font-bold"
                 >
-                    for {h1}
-                </p>                <div className="absolute top-2 right-2 flex space-x-2">
+                    { `for ${h1}`}
+                </p>}
+                <div className="absolute top-2 right-2 flex space-x-2">
                     <Button size="icon" variant="secondary" className="bg-white bg-opacity-50 hover:bg-opacity-100">
                         <Home className="h-4 w-4" />
                     </Button>
@@ -41,7 +43,7 @@ export default function RentAndSellCard({ property , h1 }) {
                 </div>
             </div>
             <div className="p-4">
-                <h3 className="text-lg font-semibold mb-1">{property.name}</h3>
+                <h3 className="text-lg font-semibold mb-1 text-start">{property.name}</h3>
                 <p className="text-sm text-gray-600 mb-2">{property.location}</p>
                 <div className="flex justify-between mb-2">
                     <div className="flex items-center">
@@ -63,7 +65,7 @@ export default function RentAndSellCard({ property , h1 }) {
                     <p className="text-sm text-gray-600">
                         {/* {property.monthlyPrice.toLocaleString()} Monthly / {property.leaseDuration} Years */}
                     </p>
-                    <p className="text-lg font-bold">{property.totalPrice.toLocaleString()} EGP</p>
+                    <p className="text-lg font-bold text-start">{property.totalPrice?.toLocaleString()} EGP</p>
                 </div>
                 <div className="flex justify-end items-center gap-1">
                     <button className="p-2 text-xl text-green-500 bg-gray-100 rounded-full">
