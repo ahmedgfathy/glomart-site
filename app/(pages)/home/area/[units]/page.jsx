@@ -29,11 +29,11 @@ export default function Page({ params }) {
   }, [unitId]);
 
   return (
-    <div className="py-10">
-      <UnitsCarousel unit={unit} />
-      <UnitSlider unit={unit} />
-      <UnitDetails unit={unit} />
-      <CardCarousel data={properties} h1="Suggested Properties" />
+    <div className='py-10 px-6'>
+        <UnitsCarousel unit={unit} />
+        <UnitSlider unit={unit}/>
+        <UnitDetails unit={unit}/>
+        <CardCarousel data={properties} h1 = "Suggested Properties"/>
     </div>
   );
 }

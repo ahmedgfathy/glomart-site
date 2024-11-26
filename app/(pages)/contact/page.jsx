@@ -28,10 +28,10 @@ export default function ContactPage() {
       [name]: value,
     }));
   };
-const handleSubmit = (e)=>{
+  const handleSubmit = (e) => {
     e.preventDefault();
     console.log(message)
-}
+  }
 
   return (
     <div className="min-h-screen relative">

@@ -9,12 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@emotion/react": "^11.13.3",
-    "@emotion/styled": "^11.13.0",
+    "@emotion/react": "^11.13.5",
+    "@emotion/styled": "^11.13.5",
     "@headlessui/react": "^2.2.0",
-    "@heroicons/react": "^2.1.5",
+    "@heroicons/react": "^2.2.0",
     "@material-tailwind/react": "^2.1.10",
-    "@mui/material": "^6.1.7",
+    "@mui/material": "^6.1.8",
     "@radix-ui/react-select": "^2.1.2",
     "@radix-ui/react-slot": "^1.1.0",
     "appwrite": "^16.0.2",
@@ -30,8 +30,8 @@
     "react-phone-input-2": "^2.15.1",
     "react-phone-number-input": "^3.4.9",
     "react-slideshow-image": "^4.3.2",
-    "swiper": "^11.1.14",
-    "tailwind-merge": "^2.5.4",
+    "swiper": "^11.1.15",
+    "tailwind-merge": "^2.5.5",
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
