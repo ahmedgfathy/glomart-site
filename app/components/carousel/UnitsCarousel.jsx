@@ -4,7 +4,7 @@ import React, { useState, useContext } from "react";
 import { Context, ContextData } from "../../network/context";
 
 export default function UnitsCarousel({unit}) {
-    const images = unit?.propertyImage?.length > 0 ? unit.propertyImage.length : [
+    const images = unit?.propertyImage?.length > 0 ? unit.propertyImage : [
         {
             img: "https://prod-images.cooingestate.com/processed/property_image/image/164288/high.webp",
         },
@@ -34,7 +34,7 @@ export default function UnitsCarousel({unit}) {
                 <Grid container className="flex justify-center">
                     <Grid item xs={12} lg={10.8}>
                         <div className="flex gap-3 overflow-hidden w-full">
-                            {images.map((item, index) => {
+                            {images && images?.map((item, index) => {
                                 const flexClass =
                                     hoveredIndex === null
                                         ? index === 0
@@ -55,7 +55,7 @@ export default function UnitsCarousel({unit}) {
                                         }}
                                     >
                                         <img
-                                            src={item.img}
+                                            src={item.img || item}
                                             alt="..."
                                             className="h-[65vh] w-full object-cover cursor-pointer "
                                         />
