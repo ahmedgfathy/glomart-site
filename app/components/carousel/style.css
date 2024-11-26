@@ -13,8 +13,12 @@
 }
 
 .swiper-slide {
+
+  margin-bottom: 10px !important;
   text-align: center;
   font-size: 18px;
+
+
 
   /* Center slide text vertically */
   display: flex;
@@ -25,7 +29,6 @@
 .swiper-slide img {
   display: block;
   width: 100%;
-  height: 100%;
   object-fit: cover;
 }
 
@@ -47,7 +50,6 @@
 
 
   height: 100vh;
-  width: 65%;
   top: 0px;
   position: fixed;
   background-color: white;

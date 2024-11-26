@@ -30,13 +30,13 @@ const Banner = () => {
   };
 
   return (
-    <div className="banner sm:h-auto md:h-[90vh] flex flex-col gap-5 justify-center items-center w-full  relative">
+    <div className="banner sm:h-[70vh] md:h-[90vh] flex flex-col gap-5 justify-center items-center w-full  relative">
       <Swiper />
-      <div className="w-full absolute px-10 lg:px-20 z-20 flex flex-col gap-5">
-        <h1 className="text-3xl lg:text-5xl text-white font-bold">
+      <div className="w-full absolute px-10 lg:px-10 z-20 flex flex-col gap-4">
+        <h1 className="text-2xl lg:text-5xl text-white font-bold">
           Find Your New Home
         </h1>
-        <p className="text-white text-xl">
+        <p className="text-white text-xl hidden md:block">
           Search & compare among 5000+ properties and 500+ compounds or list your property for sale
         </p>
 

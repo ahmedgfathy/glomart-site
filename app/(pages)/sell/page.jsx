@@ -20,7 +20,7 @@ export default function Sell() {
       <Grid container className="flex justify-center gap-5 w-full">
         {
           units.map((property, index) => (
-            <Grid item xs={12} sm={5.8} md={3.9} lg={3.4} key={index}>
+            <Grid item xs={12} sm={5.8} md={3.9} lg={3.4} key={property.$id}>
               <RentAndSellCard property={property}  h1={h1} />
             </Grid>
           ))}
