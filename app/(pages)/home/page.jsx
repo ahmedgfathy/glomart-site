@@ -16,7 +16,7 @@ export default function Page() {
   let icon_paper = [
     {
       img: "https://prod-images.cooingestate.com/processed/pathway/image/1/medium.webp",
-      title: "Developer Units",
+      title: "Primary Units",
       width: 40,
       link: `/home/search?data=${encodeURIComponent(
         JSON.stringify(properties)
@@ -32,27 +32,21 @@ export default function Page() {
     },
     {
       img: "https://prod-images.cooingestate.com/processed/pathway/image/3/medium.webp",
-      title: "Sell Your Unit",
+      title: "Units for Rent",
       width: 40,
       link: "#",
     },
     {
       img: "https://prod-images.cooingestate.com/processed/pathway/image/4/medium.webp",
-      title: "Nawy Now",
+      title: "Invest",
       width: 40,
       link: "#",
     },
     {
       img: "https://prod-images.cooingestate.com/processed/pathway/image/5/medium.webp",
-      title: "Offers",
+      title: "Hot offers",
       width: 40,
       link: "#",
-    },
-    {
-      img: "https://prod-images.cooingestate.com/processed/pathway/image/6/medium.webp",
-      title: "Top Areas",
-      width: 40,
-      link: "/home/area",
     },
   ];
 
@@ -135,8 +129,8 @@ export default function Page() {
         <Offer />
         <Logos data={logos} />
 
-        <Paper data={area} h1={top_area} results={results} />
         <CardCarousel data={properties} h1="Recommended" />
+        <Paper data={area} h1={top_area} results={results} />
         <Carousel data={data} />
 
 
