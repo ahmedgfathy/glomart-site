@@ -28,9 +28,8 @@ export default function App({ data }) {
   const [units, setUnits] = useState([]);
   const fetchData = async () => {
     const { properties, totalProperties } = await getAllProperties();
-    const likeProperties = properties.filter((property) => property.liked);
+    const likeProperties = properties.filter((property) => property.inHome);
     setUnits(likeProperties);
-    console.log(likeProperties);
   };
   useEffect(() => {
     fetchData();

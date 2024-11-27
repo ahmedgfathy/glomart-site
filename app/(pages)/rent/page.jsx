@@ -2,7 +2,6 @@
 import { useEffect, useState } from "react"
 import { getAllProperties } from "@/actions/propertiesAction"
 import { useRouter } from "next/navigation";
-
 import RentAndSellCard from "../../components/rent-and-sell-card/RentAndSellCard"
 import { Grid } from "@mui/material"
 export default function Component() {
