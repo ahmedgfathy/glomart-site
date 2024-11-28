@@ -14,12 +14,12 @@ export default function RentAndSellCard({ property, h1 }) {
     let router = useRouter()
     return (
 
-        <div key={property.$id} onClick={() => {
+        <div onClick={() => {
 
             router.push(`/home/area/${property.$id}`)
         }} className="bg-white rounded-lg shadow hover:shadow-md overflow-hidden cursor-pointer">
             <div className="relative">
-                <img src={property.href || "/images/contact-background.webp"} alt={property.name} className="w-full h-48 object-cover" />
+                <img src={property.propertyImage[0] || "/images/contact-background.webp"} alt={property.name} className="w-full h-48 object-cover" />
                { h1 === "Recommended" && <p
                     className="absolute top-0 text-sm bg-red-500 text-white px-2  py-1 text-center rounded-md font-bold"
                 >

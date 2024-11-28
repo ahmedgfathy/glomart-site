@@ -28,7 +28,7 @@ export default function App({ data }) {
             className="font-bold text-2xl my-4"
             style={{ color: "rgb(30, 65, 100)" }}
           >
-            Top Compounds
+            Top Projects
           </h1>
           <p className="text-gray-500 mb-3">21 Results Available </p>
 
