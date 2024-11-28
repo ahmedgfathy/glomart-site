@@ -37,7 +37,8 @@ export default function Page({ h1, data, results }) {
                 md={3}
                 lg={item.round === "full" ? 2.4 : 1.5}
                 key={index}
-                className="border cursor-pointer flex gap-2 p-4 flex-col rounded-lg justify-center items-center"
+                direction="column"
+                className="border cursor-pointer gap-2 p-4  rounded-lg justify-center items-center"
                 style={{ borderColor: "#ccc" }}
                 onClick={() => {
                   item.link ? router.push(item.link) : undefined;
