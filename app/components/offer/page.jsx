@@ -13,16 +13,29 @@ export default function Page() {
       image:
         "https://www.nawy.com/_next/static/media/sahel-banner-text.2c92e060.svg",
     },
+    {
+      backgroundImage:
+        "https://www.nawy.com/_next/static/media/sahel-banner.f446f11a.webp",
+      image:
+        "https://www.nawy.com/_next/static/media/sahel-banner-text.2c92e060.svg",
+    },
+    {
+      backgroundImage:
+        "https://www.nawy.com/_next/static/media/sahel-banner.f446f11a.webp",
+      image:
+        "https://www.nawy.com/_next/static/media/sahel-banner-text.2c92e060.svg",
+    },
   ];
 
   return (
     <div>
-      <Grid container className="flex justify-center mt-6 mb-6 gap-5">
+      <Grid container className="flex justify-between mt-6 mb-6 gap-5">
         {data.map((item, index) => (
           <Grid
             item
             xs={12}
-            md={5.3}
+            md={5.8}
+            lg={2.8}
             key={index}
             className="h-[200px] w-full relative rounded-lg"
             sx={{
@@ -35,7 +48,7 @@ export default function Page() {
               <img
                 src={item.image}
                 alt="..."
-                className="absolute left-[20px]  top-1/2 -translate-y-1/2"
+                className="absolute w-full left-[20px]  top-1/2 -translate-y-1/2"
               />
             )}
           </Grid>

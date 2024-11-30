@@ -38,7 +38,7 @@ export default function App({ data }) {
   return (
     <div>
       <Grid container className="flex justify-center">
-        <Grid item xs={12} lg={10.8}>
+        <Grid item xs={12} >
           <h1
             className="font-bold text-2xl my-4"
             style={{ color: "rgb(30, 65, 100)" }}

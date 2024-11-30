@@ -8,6 +8,7 @@ import Logos from "../../components/carousel/logos";
 import { properties, resaleUnits } from "./data";
 import Offer from "../../components/offer/page";
 import { area } from "./data";
+import { Grid } from "@mui/material";
 export default function Page() {
   let icon_paper_h1 = "What Are You Looking For ?";
   let top_area = "Top Areas";
@@ -126,21 +127,33 @@ export default function Page() {
     {
       img: "https://prod-images.cooingestate.com/processed/compound/cover_image/1364/high.webp",
     },
+    {
+      img: "https://prod-images.cooingestate.com/processed/compound/cover_image/1364/high.webp",
+    },
+    {
+      img: "https://prod-images.cooingestate.com/processed/compound/cover_image/1368/high.webp",
+    },
+
+    {
+      img: "https://prod-images.cooingestate.com/processed/compound/cover_image/1364/high.webp",
+    },
+    {
+      img: "https://prod-images.cooingestate.com/processed/compound/cover_image/1364/high.webp",
+    },
   ];
   return (
     <div className="min-h-screen">
       <Index />
-      <div className="py-20 px-10 lg:px-20 ">
-        <Paper data={icon_paper} h1={icon_paper_h1} />
-        <Offer />
-        <Logos data={logos} />
-
-        <Paper data={area} h1={top_area} results={results} />
-        <CardCarousel data={properties} h1="Recommended" />
-        <Carousel data={data} />
-
-
-      </div>
+      <Grid container className="justify-center px-5">
+        <Grid item xs={12} lg={10}>
+          <Paper data={icon_paper} h1={icon_paper_h1} />
+          <Offer />
+          <Logos data={logos} />
+          <Paper data={area} h1={top_area} results={results} />
+          <CardCarousel data={properties} h1="Recommended" />
+          <Carousel data={data} />
+        </Grid>
+      </Grid>
     </div>
   );
 }

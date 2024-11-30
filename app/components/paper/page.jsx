@@ -9,8 +9,8 @@ export default function Page({ h1, data, results }) {
   const [hoveredImage, setHoveredImage] = useState(null);
   return (
     <div>
-      <Grid container className="flex gap-10 md:justify-between lg:justify-center">
-        <Grid item xs={12} lg={10.8} >
+      <Grid container className="flex gap-5 md:justify-between ">
+        <Grid item xs={12} >
           <h1
             className="font-bold lg:text-2xl my-4 "
             style={{ color: "rgb(30, 65, 100)" }}
@@ -22,7 +22,7 @@ export default function Page({ h1, data, results }) {
           </p>
         </Grid>
       </Grid>
-      <Grid container className="flex gap-10 md:justify-between lg:justify-center">
+      <Grid container className="flex gap-10 md:justify-between ">
         {data &&
           data?.map((item, index) => {
             return (
@@ -31,7 +31,7 @@ export default function Page({ h1, data, results }) {
                 xs={12}
                 sm={5.5}
                 md={3}
-                lg={item.round === "full" ? 2.4 : 1.5}
+                lg={item.round === "full" ? 2.7 : 1.65}
                 key={index}
                 className="border cursor-pointer flex gap-2 p-4 flex-col rounded-lg justify-center items-center"
                 style={{ borderColor: "#ccc" }}
