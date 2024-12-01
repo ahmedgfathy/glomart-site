@@ -9,7 +9,7 @@ export default function Page({ h1, data, results }) {
   const [hoveredImage, setHoveredImage] = useState(null);
   return (
     <div>
-      <Grid container className="flex gap-10 md:justify-between lg:justify-center">
+      <Grid container className="flex gap-10 md:justify-between">
         <Grid item xs={12} lg={10.8}>
           <h1
             className="font-bold lg:text-2xl my-4"
@@ -24,7 +24,7 @@ export default function Page({ h1, data, results }) {
       </Grid>
       <Grid
         container
-        className="flex gap-4 md:gap-10 md:justify-between lg:justify-center"
+        className="flex gap-4 md:gap-10 md:justify-between"
         direction={{ xs: "column", md: "row" }} 
       >
         {data &&
