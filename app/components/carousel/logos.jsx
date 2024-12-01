@@ -24,7 +24,7 @@ export default function App({ data }) {
   return (
     <div>
       <Grid container className="flex justify-center">
-        <Grid item xs={12} lg={10.8}>
+        <Grid item xs={12}>
           <div className="relative">
             <Swiper
               spaceBetween={20}
@@ -46,8 +46,8 @@ export default function App({ data }) {
                 768: {
                   slidesPerView: 3, // Medium screens
                 },
-                1024: {
-                  slidesPerView: 3, // Large screens
+                1200: {
+                  slidesPerView: 6, // Large screens
                 },
               }}
             >
@@ -56,7 +56,7 @@ export default function App({ data }) {
                   <img
                     src={ele.img}
                     alt="..."
-                    className="rounded-lg h-[200px]"
+                    className="rounded-lg sm:h-[200]  lg:h-[170px]"
                   />
                 </SwiperSlide>
               ))}

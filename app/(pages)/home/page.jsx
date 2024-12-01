@@ -8,6 +8,7 @@ import Logos from "../../components/carousel/logos";
 import { properties, resaleUnits } from "./data";
 import Offer from "../../components/offer/page";
 import { area } from "./data";
+import { Grid } from "@mui/material";
 export default function Page() {
   let icon_paper_h1 = "What Are You Looking For ?";
   let top_area = "Top Areas";
@@ -120,12 +121,32 @@ export default function Page() {
     {
       img: "https://prod-images.cooingestate.com/processed/compound/cover_image/1364/high.webp",
     },
+    {
+      img: "https://prod-images.cooingestate.com/processed/compound/cover_image/1364/high.webp",
+    },
+    {
+      img: "https://prod-images.cooingestate.com/processed/compound/cover_image/1368/high.webp",
+    },
+
+    {
+      img: "https://prod-images.cooingestate.com/processed/compound/cover_image/1364/high.webp",
+    },
+    {
+      img: "https://prod-images.cooingestate.com/processed/compound/cover_image/1364/high.webp",
+    },
   ];
   return (
     <div className="min-h-screen">
       <Index />
-      <div className="py-20 px-10 lg:px-20 ">
-        <Paper data={icon_paper} h1={icon_paper_h1} />
+      <div className="py-10 px-10 lg:px-20 ">
+
+        {/* <Paper data={icon_paper} h1={icon_paper_h1} /> */}
+        <h1
+            className="font-bold lg:text-2xl my-1"
+            style={{ color: "rgb(30, 65, 100)" }}
+          >
+            What Are You Looking For ?
+          </h1>
         <Offer />
         <Logos data={logos} />
 

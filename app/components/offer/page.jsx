@@ -1,7 +1,11 @@
+"use client"
+import { Button } from "@/components/ui/button";
 import { Grid } from "@mui/material";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 export default function Page() {
+  const router = useRouter()
   const data = [
     {
       backgroundImage:
@@ -10,34 +14,46 @@ export default function Page() {
     {
       backgroundImage:
         "https://www.nawy.com/_next/static/media/sahel-banner.f446f11a.webp",
-      image:
-        "https://www.nawy.com/_next/static/media/sahel-banner-text.2c92e060.svg",
+    },
+    {
+      backgroundImage:
+        "https://www.nawy.com/_next/static/media/sahel-banner.f446f11a.webp",
+    },
+    {
+      backgroundImage:
+        "https://www.nawy.com/_next/static/media/sahel-banner.f446f11a.webp",
     },
   ];
 
   return (
     <div>
-      <Grid container className="flex justify-center mt-6 mb-6 gap-5">
+      <Grid container className="flex justify-between mt-6 mb-6 gap-5">
         {data.map((item, index) => (
           <Grid
             item
             xs={12}
-            md={5.3}
+            md={5.8}
+            lg={2.8}
             key={index}
-            className="h-[200px] w-full relative rounded-lg"
+            className="h-[200px] w-full relative rounded-lg overflow-hidden group"
             sx={{
               backgroundImage: `url(${item.backgroundImage})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
           >
-            {item.image && (
-              <img
-                src={item.image}
-                alt="..."
-                className="absolute left-[20px]  top-1/2 -translate-y-1/2"
-              />
-            )}
+            <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex justify-center items-center gap-4 transition-opacity">
+              <Button
+                onClick={() => router.push('/rent')}
+              >
+                Rent
+              </Button>
+              <Button
+                onClick={() => router.push('/sell')}
+              >
+                Sell
+              </Button>
+            </div>
           </Grid>
         ))}
       </Grid>

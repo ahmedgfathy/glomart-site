@@ -35,7 +35,7 @@ export default function Page({ h1, data, results }) {
                 xs={12}
                 sm={5.5}
                 md={3}
-                lg={item.round === "full" ? 2.4 : 1.5}
+                lg={item.round === "full" ? 2.7 : 1.65}
                 key={index}
                 direction="column"
                 className="border cursor-pointer gap-2 p-4  rounded-lg justify-center items-center"
